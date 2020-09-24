@@ -9,7 +9,7 @@ public class Snake{
 	int snake=3;
         
 	for(player=0;player<=100;){
-		int point=getRandomInteger(6, 1);
+                int point=getRandomInteger(6, 1);
 		int action=getRandomInteger(3,1);
 		
         	if(action==No_play)
@@ -19,8 +19,12 @@ public class Snake{
 			if(player<0)
 				player=0;
 		}
-		else 
+		else {
+
 			player+=point;
+			if(player>100)
+ 				player-=point;
+		}
 	}
                 
 }
