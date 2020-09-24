@@ -7,9 +7,11 @@ public class Snake{
 	int No_play=1;
 	int ladder=2;
 	int snake=3;
+	int clock=0;
         
 	for(player=0;player<=100;){
-                int point=getRandomInteger(6, 1);
+		int point=getRandomInteger(6, 1);
+		clock++;
 		int action=getRandomInteger(3,1);
 		
         	if(action==No_play)
@@ -24,7 +26,15 @@ public class Snake{
 			player+=point;
 			if(player>100)
  				player-=point;
+			else if(player==100){
+				System.out.println("Player Win");
+				System.out.println("Numer of time dice was Rotated efore getting winning point "+ clock);
+				break;
+			}
+			
+                        
 		}
+		System.out.println("Position of Player " + player);
 	}
                 
 }
