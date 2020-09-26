@@ -38,7 +38,7 @@ public class Snake{
 					break;
 					}
 				while(j==1){
-                                
+                                        clock++;
 					point=getRandomInteger(6, 1);
 					action=getRandomInteger(3,1);
 					if(action==ladder){
@@ -82,7 +82,7 @@ public class Snake{
 					break;
 					}
 				while(j==1){
-                                
+                                        clock++;
 					point=getRandomInteger(6, 1);
 					action=getRandomInteger(3,1);
 					if(action==ladder){
